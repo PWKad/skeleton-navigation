@@ -8,8 +8,8 @@ function reportChange(event) {
 }
 
 gulp.task('watch', function() {
-  gulp.watch(paths.source, ['build-system']).on('change', reportChange);
-  gulp.watch(paths.html, ['build-html']).on('change', reportChange);
-  gulp.watch(paths.css, ['build-css']).on('change', reportChange);
+  gulp.watch(paths.source, ['build']).on('change', reportChange);
+  gulp.watch(paths.html, ['build']).on('change', reportChange);
+  gulp.watch(paths.css, ['build']).on('change', reportChange);
   gulp.watch(paths.style).on('change', reportChange);
 });
