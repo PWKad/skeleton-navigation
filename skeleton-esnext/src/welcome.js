@@ -10,9 +10,11 @@ export class Welcome {
     this.controller.validateTrigger = validateTrigger.changeOrBlur;
   }
   attached() {
+    console.log('focusing')
     this.hasFocus = false;
     setTimeout(() => {
+      console.log('again')
       this.hasFocus = true;
-    })
+    }, 1)
   }
 }
