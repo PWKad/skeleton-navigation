@@ -10,6 +10,9 @@ export class Welcome {
     this.controller.validateTrigger = validateTrigger.changeOrBlur;
   }
   attached() {
-    this.hasFocus = true;
+    this.hasFocus = false;
+    setTimeout(() => {
+      this.hasFocus = true;
+    })
   }
 }
