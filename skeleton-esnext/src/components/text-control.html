@@ -1,0 +1,16 @@
+<template>
+  <require from="../resources/number-format"></require>
+  <div class="form-row">
+    <div class="form-item ${errors.length ? 'has-error error' : ''}">
+      <div class="input-group">
+        <input type="string" class="form-control"
+          value.bind="value | numberFormat"
+          blur.trigger="func()"
+          focus.bind="hasFocus" />
+      </div>
+      <span class="help-block" repeat.for="errorInfo of errors">
+        ${errorInfo.error.message}
+      </span>
+    </div>
+  </div>
+</template>
