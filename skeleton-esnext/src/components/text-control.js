@@ -6,6 +6,7 @@ export class TextControl extends ControlBase {
   @bindable value = '';
   @bindable func = function () { console.log('func called')};
   @bindable errors = [];
+  @bindable hasFocus = false;
 
   constructor(element: Element, taskQueue: TaskQueue) {
     super(element, taskQueue);

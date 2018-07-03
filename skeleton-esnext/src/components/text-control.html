@@ -6,7 +6,7 @@
         <input type="string" class="form-control"
           value.bind="value | numberFormat"
           blur.trigger="func()"
-          focus.bind="true" />
+          focus.bind="hasFocus" />
       </div>
       <span class="help-block" repeat.for="errorInfo of errors">
         ${errorInfo.error.message}
