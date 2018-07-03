@@ -10,7 +10,9 @@
         has-focus.bind="hasFocus">
       </text-control>
       Last Name
-      <text-control value.bind="person.lastName">
+      <text-control
+        value.bind="person.lastName"
+        has-focus.bind="!hasFocus">
       </text-control>
     </form>
   </section>
