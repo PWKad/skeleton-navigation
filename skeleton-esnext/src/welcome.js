@@ -9,4 +9,7 @@ export class Welcome {
     this.controller = controllerFactory.createForCurrentScope();
     this.controller.validateTrigger = validateTrigger.changeOrBlur;
   }
+  activate() {
+    this.hasFocus = true;
+  }
 }
